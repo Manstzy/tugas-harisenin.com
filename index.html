@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="bg-gradient-to-tr flex from-purple-500 to-blue-500 w-full">
+      <nav class="w-full fixed flex px-4 py-2 justify-between">
+        <h1 class="text-white font-bold text-lg">Product Mania</h1>
+        <img
+          onclick="shopping()"
+          src="./images/shopping.png"
+          class="text-white filter invert text-sm"
+          alt=""
+        />
+        <div
+          id="count"
+          class="absolute right-2 mt-4 flex items-center justify-center text-white px-2 bg-red-500 rounded-full"
+        >
+          0
+        </div>
+      </nav>
+
+      <div
+        id="sidebar"
+        class="hidden bg-white fixed h-screen top-0 right-0 w-60 z-10"
+      >
+        <h1 class="text-center mt-4">Shopping Cart</h1>
+
+        <div id="containerSidebar" class="">
+          <img src="./images/remove.png" alt="" />
+        </div>
+
+        <div
+          onclick="closeElement()"
+          class="absolute bottom-0 w-full text-center text-white hover:bg-red-700 transition-all duration-300 py-2 bg-red-500"
+        >
+          Close
+        </div>
+      </div>
+
+      <div
+        id="cards"
+        class="grid grid-cols-1 tablet:px-5 large:px-16 laptop:px-20 desktop:grid-cols-4 desktop:px-20 mt-10 medium:grid-cols-2 tablet:grid-cols-3 gap-5 medium:px-10 medium:gap-5 px-16 py-10"
+      ></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
